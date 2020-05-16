@@ -1,5 +1,7 @@
 # mdbook-puml
 
+[![Crates.io](https://img.shields.io/crates/v/mdbook-puml.svg)](https://crates.io/crates/mdbook-puml)
+
 This is a simple [mdbook](https://crates.io/crates/mdbook) preprocessor designed to replace code blocks that look like:
 
     ```plantuml
