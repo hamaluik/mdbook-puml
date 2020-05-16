@@ -14,3 +14,23 @@ I created this preprocessor because [mdbook-plantuml](https://crates.io/crates/m
 
 This crate is quite simple and non-customizable at this point as it does all that I need it to for my own purposes. Feel free to fork and/or PR away though, and I'll be happy to include changes.
 
+## Usage
+
+To install _mdbook-puml_, use cargo:
+
+```
+cargo install mdbook-puml
+```
+
+Then add the following to `book.toml`:
+
+```
+[preprocessor.puml]
+```
+
+Finally, to insert a PlantUML diagram somewhere, just use a fenced code block with the language set to `plantuml`:
+
+    ```plantuml
+    Bob -> Alice : Hello!
+    ```
+

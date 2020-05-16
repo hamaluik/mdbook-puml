@@ -3,6 +3,18 @@ name = "mdbook-puml"
 version = "0.1.0"
 authors = ["Kenton Hamaluik <kenton@hamaluik.ca>"]
 edition = "2018"
+keywords = ["mdbook", "plantuml", "markdown", "commonmark"]
+description = "A simple mdbook preprocessor for rendering inline PlantUML code blocks into inline SVG"
+repository = "https://github.com/hamaluik/mdbook-puml"
+readme = "README.md"
+license = "Apache-2.0"
+exclude = [
+    "docs/*",
+    "examples/*",
+]
+
+[badges]
+maintenance = { status = "passively-maintained" }
 
 [dependencies]
 clap = "2.33"
