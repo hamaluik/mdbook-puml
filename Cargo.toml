@@ -1,0 +1,13 @@
+[package]
+name = "mdbook-puml"
+version = "0.1.0"
+authors = ["Kenton Hamaluik <kenton@hamaluik.ca>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33"
+mdbook = "0.3"
+pulldown-cmark = "0.7"
+pulldown-cmark-to-cmark = "4.0"
+serde_json = "1.0"
+
