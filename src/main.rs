@@ -185,7 +185,7 @@ fn puml(chapter: &mut Chapter) -> Result<(), Error> {
                     let svg = svg.replace(r#"<?xml version="1.0" encoding="UTF-8" standalone="no"?>"#, "");
 
                     // and wrap it up in a figure and emit it
-                    Some(Event::Html(CowStr::from(format!("<figure>{}</figure>", svg))))
+                    Some(Event::Html(CowStr::from(format!("<figure>{}</figure>\n\n", svg))))
                 },
                 // intercept text events if we're currently in the code block state
                 Event::Text(txt) => {

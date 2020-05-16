@@ -6,6 +6,5 @@ src = "src"
 title = "Example"
 
 [preprocessor.puml]
-command = "/home/kenton/Documents/projects/mdbook-puml/target/debug/mdbook-puml"
-renderer = ["html"]
+command = "../target/debug/mdbook-puml"
 
