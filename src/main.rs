@@ -21,19 +21,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-use clap::{App, Arg, ArgMatches, SubCommand};
+use clap::{App, Arg, ArgMatches};
 use mdbook::book::{Book, Chapter};
 use mdbook::errors::Error;
 use mdbook::preprocess::{CmdPreprocessor, Preprocessor, PreprocessorContext};
 use std::io;
 use std::process;
 
-fn make_app() -> App<'static, 'static> {
+fn make_app() -> App<'static> {
     App::new("puml")
         .about("A mdbook preprocessor which converts PlantUML code blocks into inline SVG")
         .subcommand(
-            SubCommand::with_name("supports")
-                .arg(Arg::with_name("renderer").required(true))
+            App::new("supports")
+                .arg(Arg::new("renderer").required(true))
                 .about("Check whether a renderer is supported by this preprocessor")
         )
 }
