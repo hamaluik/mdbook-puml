@@ -203,7 +203,7 @@ fn puml(chapter: &mut Chapter) -> Result<(), Error> {
         });
 
     let mut buf = String::with_capacity(chapter.content.len());
-    pulldown_cmark_to_cmark::cmark(events, &mut buf, None).expect("can re-render cmark");
+    pulldown_cmark_to_cmark::cmark(events, &mut buf).expect("can re-render cmark");
     chapter.content = buf;
 
     Ok(())
