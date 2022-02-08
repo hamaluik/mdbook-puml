@@ -78,7 +78,7 @@ fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
 /// taken straight out of the mdbook book
 fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
     let renderer = sub_args.value_of("renderer").expect("Required argument");
-    let supported = pre.supports_renderer(&renderer);
+    let supported = pre.supports_renderer(renderer);
 
     if supported {
         process::exit(0);
@@ -190,7 +190,7 @@ fn puml(chapter: &mut Chapter) -> Result<(), Error> {
                 // intercept text events if we're currently in the code block state
                 Event::Text(txt) => {
                     if let Some(puml) = puml.as_mut() {
-                        puml.push_str(&txt);
+                        puml.push_str(txt);
                         None
                     }
                     else {
